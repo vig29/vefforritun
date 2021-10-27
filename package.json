@@ -2,7 +2,10 @@
   "name": "vef1-2021-v7",
   "version": "1.0.0",
   "scripts": {
-    "dev": "browser-sync start --server --files scripts.js index.html"
+    "dev": "browser-sync start --server --files scripts.js index.html",
+    "copy1": "cpy ./*.html ./build/",
+    "copy2": "cpy ./*.js ./build/",
+    "build": "concurrently npm:copy2 npm:copy1"
   },
   "keywords": [],
   "author": "",
